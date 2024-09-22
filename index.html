@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,19 +17,49 @@
       theme: {
         extend: {
           colors: {
-            clifford: '#da373d',
+             commonColor: '#B4F461',
+            heading: ' hsva(0,0%,7%,1)',
+
           },
-        fontFamily: {
-           Lexend: "Lexend",
-        },
+          fontFamily: {
+            Lexend: "Lexend",
+          },
         }
       }
     }
   </script>
 </head>
-
-<body>
-
+<body class="font-Lexend">
+  <header class="  pb-4 shadow-md">
+    <div class="bg-orange-50 py-6">
+      <div class="navbar   container mx-auto ">
+        <div class="navbar-start">
+          <button
+            class=" text-xl font-semibold text-headine  
+             py-2 px-4 rounded-md transition ease-in-out bg-commonColor hover:bg-green-300 hover:outline-2 duration-300"><a>Blog</a></button>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1">
+            <div class="h-6 w-6 mr-3">
+              <img class="text-xl" src="./assets/logo.png" alt="">
+            </div>
+            <h4 class="  text-xl font-semibold text-black"> Donate Bangladesh</h4>
+          </ul>
+        </div>
+        <div class="navbar-end ">
+          <span class="h-4 w-4 mr-1"><img src="./assets/coin.png" alt=""></span>
+          <h4 class="text-xl font-medium"> 5500 <span>BDT</span></h4>
+        </div>
+      </div>
+    </div>
+    <!--banner btn-->
+    <div class="  mt-10 flex gap-6 justify-center items-center">
+      <button class="btn border-gray-200 text-xl font-md text- heading">Donation</button>
+      <button class="btn text-xl font-md border-gray-200">History</button>
+    </div>
+  </header>
+  <main></main>
+  <footer></footer>
 </body>
 
 </html>
