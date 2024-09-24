@@ -30,14 +30,16 @@
     }
   </script>
 </head>
+
 <body class="font-Lexend">
-  <header class="  pb-4 top-0 sticky w-full bg-gray-100 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-20" ">
-    <div class=" bg-orange-50 py-6">
+  <header class="  pb-4 top-0 lg:sticky w-full bg-gray-100 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-20">
+    <div class=" bg-orange-50 py-6 border ">
     <div class="navbar   container mx-auto ">
       <div class="navbar-start">
         <button
           class=" text-xl font-semibold text-headine  
-             py-2 px-4 rounded-md transition ease-in-out bg-commonColor hover:bg-green-300 hover:outline-2 duration-300" onclick="sendData()"> Blog </button>
+             py-2 px-4 rounded-md transition ease-in-out bg-commonColor hover:bg-green-300 hover:outline-2 duration-300"
+          onclick="sendData()"> Blog </button>
       </div>
       <div class="navbar-center hidden lg:flex">
         <ul class="menu menu-horizontal px-1">
@@ -49,7 +51,7 @@
       </div>
       <div class="navbar-end gap-1">
         <span class="h-7 w-7 mr-1"><img src="./assets/coin.png" alt=""></span>
-        <h4 id="balance" class="text-xl font-medium"> 5500</h4>
+        <h4 id="balance" class="text-xl font-medium">5500</h4>
         <span class="text-xl font-medium">BDT</span>
       </div>
     </div>
@@ -205,14 +207,14 @@
           <h2 id="addAmount" class="font-bold text-2xl"></h2>
           <p class="font-bold text-2xl">BDT</p>
         </div>
-        <p class="py-4">You Have Donated for Humankind</p>
+        <p id="modalHeading" class="py-4">You Have Donated for Humankind</p>
         <span class="text-2xl font-extrabold text-black mb-4">Successfully</span>
         <div class="modal-action">
           <label for="my_modal_6" class="btn text-center">Close confirmation</label>
         </div>
       </div>
     </div>
-    <div id="historyContainer" class=" hidden min-h-[calc(100vh-370px)]">  
+    <div id="historyContainer" class=" hidden min-h-[calc(100vh-370px)]">
     </div>
   </main>
   <footer class="bg-orange-50 py-16">

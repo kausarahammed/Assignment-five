@@ -2,13 +2,13 @@ const donationContainer = document.getElementById('donationContainer');
 const historyContainer = document.getElementById('historyContainer');
 const historyButton = document.getElementById('historyButton');
 const donationButton = document.getElementById('donationButton');
-historyButton.addEventListener('click', () => {
+historyButton.addEventListener('click', function() {
     historyContainer.classList.remove('hidden')
     donationContainer.classList.add('hidden')
     historyButton.classList.add('bg-commonColor', 'font-semibold')
     donationButton.classList.remove('bg-commonColor', 'font-semibold')
 })
-donationButton.addEventListener('click', () => {
+donationButton.addEventListener('click', function() {
     historyContainer.classList.add('hidden')
     donationContainer.classList.remove('hidden')
     historyButton.classList.remove('bg-commonColor', 'font-semibold')

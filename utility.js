@@ -4,9 +4,13 @@ function inputValueById (heading,  inputValueId, inputText){
         const hedding = document.getElementById(heading).innerText
         const textValue = document.getElementById(inputValueId)
         const inputValue = document.getElementById(inputText).value 
-        if(isNaN(inputValue) || 0 > inputValue || inputValue === ""){
-            alert ('invalid data is found and stop the transaction.')
+        if(isNaN(inputValue) || 0 >= inputValue){
+            alert ('Invalid data is found and stop the transaction.')
             return;    
+        }
+       else if(inputValue === ""){
+        alert ('Please input your amount')
+        return
         }
         if(parseFloat(inputValue) > parseFloat(balance.innerText)){
             alert('Your not available cash')
@@ -18,6 +22,7 @@ function inputValueById (heading,  inputValueId, inputText){
          document.getElementById('balance').innerText = serving
         document.getElementById('my_modal_6').checked = true
         document.getElementById('addAmount').innerText = inputValue
+        document.getElementById('modalHeading').innerText = hedding
         document.getElementById(inputText).value = null 
     const div = document.createElement('div')
      div.classList.add('border','rounded-lg', 'p-16','container', 'mx-auto', 'my-4')
