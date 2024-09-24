@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            commonColor: '#B4F461',
+            heading: ' hsva(0,0%,7%,1)',
+            paragraph: '#111111B3'
+
+          },
+          fontFamily: {
+            Lexend: "Lexend",
+          },
+        }
+      }
+    }
+  </script>
+  <title>Dom</title>
+</head>
+
+<body class="font-Lexend">
+  <nav>
+    <div class=" bg-orange-50 py-6">
+      <div class="navbar   container mx-auto ">
+        <div class="navbar-start">
+          <button
+            class=" text-xl font-semibold text-headine  
+               py-2 px-4 rounded-md transition ease-in-out bg-commonColor hover:bg-green-300 hover:outline-2 duration-300"
+            onclick="getBack()">Home</button>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1">
+            <div class="h-6 w-6 mr-3">
+              <img class="text-xl" src="./assets/logo.png" alt="">
+            </div>
+            <h4 class="  text-xl font-semibold text-black"> Donate Bangladesh</h4>
+          </ul>
+        </div>
+        <div class="navbar-end gap-1">
+          <span class="h-7 w-7 mr-1"><img src="./assets/coin.png" alt=""></span>
+          <h4 id="balance" class="text-xl font-medium"> 5500</h4>
+          <span class="text-xl font-medium">BDT</span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="  flex flex-col container mx-auto ">
+    <h1 class="font-extrabold text-5xl my-6 container mx-auto">Importent FAQ <i class="fa-solid fa-question"></i></h1>
+    <div class="collapse bg-base-200 lg:mb-12 mb-6">
+      <input type="radio" name="my-accordion-1" checked="checked" />
+      <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM)?</div>
+      <div class="collapse-content">
+        <p>
+          The Document Object Model (DOM) is a plotting interface, or structure, that represents HTML and XML
+          documents.
+          Documer exposes all elements through a structure, where it is viewed as an object. These objects can be
+          written and modified by plotting languages ​​such as JavaScript.</p>
+      </div>
+    </div>
+    <div class="collapse bg-base-200 lg:mb-12 mb-6">
+      <input type="radio" name="my-accordion-1" />
+      <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?
+      </div>
+      <div class="collapse-content">
+        <h4 class="text-lg font-bold">select elements specified Id :</h4>
+        <p class="font-medium">let element = document.getElementById("myElementId");</p>
+        <h4 class="text-lg font-bold">To select multiple elements specific class:</h4>
+        <p class="font-medium">let element = document.getElementByClassName("myClassName");</p>
+        <h4 class="text-lg font-bold">To select elements by specified tag name:</h4>
+        <p class="font-medium"> let elements = document.getElementsByTagName("p");</p>
+        <h4 class="text-lg font-bold">To select an element like a CSS selector:</h4>
+        <p class="font-medium">let element = document.querySelector(".myClassName");</p>
+        <h4 class="text-lg font-bold">To select multiple elements like a CSS selector: </h4>
+        <p class="font-medium">let element = document.querySelectorAll(".myClassName");</p>
+      </div>
+    </div>
+    <div class="collapse bg-base-200 lg:mb-12 mb-6">
+      <input type="radio" name="my-accordion-1" />
+      <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and why is
+        it useful?
+      </div>
+      <div class="collapse-content">
+        <p class="font-medium">Event delegation is a technique in JavaScript where events are attached to their parent
+          elements (parent
+          elements) instead of specific smaller elements (elements). This causes the event to bubble up to that parent
+          content, and event handlers work for many objects.</p>
+      </div>
+    </div>
+    <div class="collapse bg-base-200 lg:mb-12 mb-6 ">
+      <input type="radio" name="my-accordion-1" />
+      <div class="collapse-title text-xl font-medium ">How do you manipulate an element's attributes and styles using
+        the DOM?
+      </div>
+      <div class="collapse-content">
+
+        <h4> let element = document.getElementById("myElement");</h4>
+        <h4>let value = element.getAttribute("data-info");</h4>
+        <h4>element.setAttribute("data-info");</h4>
+        <h4>element.removeAttribute("data-info");</h4>
+
+      </div>
+    </div>
+
+
+  </div>
+  <script src="./js/blog.js"></script>
+</body>
+
+</html>
